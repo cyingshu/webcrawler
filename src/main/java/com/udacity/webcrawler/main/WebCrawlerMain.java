@@ -44,17 +44,15 @@ public final class WebCrawlerMain {
     if(config.getResultPath().isEmpty() || config.getResultPath().isBlank()) {
       System.out.println("crawler result is empty/blank");
       resultWriter.write(new OutputStreamWriter(System.out));
-    }
-    else {
-      System.out.println("Crawler result written to " + config.getResultPath());
+    } else {
+      System.out.println("Crawler result is written to " + config.getResultPath());
       resultWriter.write(Path.of(config.getResultPath()));
     }
     if(config.getProfileOutputPath().isEmpty()||config.getProfileOutputPath().isEmpty()) {
-      System.out.println("profiler result has been written to " );
+      System.out.println("profiler result is empty/blank" );
       profiler.writeData(new OutputStreamWriter(System.out));
-    }
-    else {
-      System.out.println(" Profiler has been result written to " + config.getProfileOutputPath());
+    } else {
+      System.out.println(" Profiler result is written to " + config.getProfileOutputPath());
       profiler.writeData(Path.of(config.getProfileOutputPath()));
     }
   }
